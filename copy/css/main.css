@@ -1,22 +1,22 @@
 html {
+	font-size: 62.5%;
 	overflow-x: hidden;
 	margin-right: calc(-1 * (100vw - 100%));
 }
 
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5;
-	font-size: 16px;
-	color: #333;
+	font-size: 1.6rem;
+	color: #252525; /* Wikipedia */
 }
 
 header {
 	background: #000;
 	text-align: center;
 	font-weight: bold;
-	font-size: 5rem;
-	padding: 5rem;
-	color: white;
+	font-size: 8rem;
+	padding: 8rem;
 }
 
 .page-header {
@@ -29,12 +29,12 @@ header {
 }
 
 .main-and-footer-container {
-	padding: 2rem;
+	padding: 0 4rem;
 }
 
 main {
-	max-width: 70rem;
-	margin: 0 auto;
+	max-width: 108rem;
+	margin: 4rem auto;
 }
 
 main > :first-child {
@@ -46,9 +46,8 @@ main > :last-child {
 }
 
 footer {
-	max-width: 70rem;
-	margin: 0 auto;
-	margin-top: 3rem;
+	max-width: 108rem;
+	margin: 4rem auto;
 	overflow: hidden;
 }
 
@@ -60,44 +59,40 @@ footer > :last-child {
 	margin-right: 0;
 }
 
-.footer-left {
+.float-left {
 	float: left;
-	margin: 0.25rem 0.3rem 0.25rem 0;
 }
 
-.footer-right {
+.float-right {
 	float: right;
-	margin: 0.25rem 0 0.25rem 1rem;
 }
 
-.license-icon {
-	height: 1rem;
-	float: left;
-	margin: 0.5rem 0.3rem 0.5rem 0;
+.footer-text {
+	margin: 0.4rem 1.6rem;
 }
 
 .delta-footer {
-	height:2rem;
+	height:3.2rem;
 	position:absolute;
-	left:50%;
-	margin: 0 0 0 -1rem;
+	left: 50vw;
+	margin: 0 0 0 -1.6rem;
 	enable-background:new 0 0 1000 1000;
 	transition: all .4s;
 }
 
 .delta-footer:hover {
-	transform: rotate(-30deg) translate(-0.3rem, -0.25rem);
+	transform: translate(-0.48rem, -0.4rem) rotate(-30deg);
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: #000;
 	line-height: 1.2;
-	margin: 1rem 0 0 0;
+	margin: 1.6rem 0 0 0;
 }
 
 h1, h2 {
-	margin: 2rem 0 0 0;
+	margin: 3.2rem 0 0 0;
 }
 
 h2 {
@@ -118,49 +113,27 @@ li > a:after {
 	display: inline-block;
 	content:"";
 	position: relative;
+	background-image: url('/img/link_out.svg');
+	top: 0;
+	left: 0;
+	margin: 0;
+	background-size: 1.6rem 1.6rem;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 p > a:not([href*="//"]):after,
 li > a:not([href*="//"]):after {
-	background-image: url('/img/delta_small_blue.svg');
-	top: 0.1rem;
-	left: 0.05rem;
-	margin: -0.1rem 0.05rem -0.1rem 0;
-	background-size: 1.2rem 1.2rem;
-	width: 1.2rem;
-	height: 1.2rem;
+	background-image: url('/img/link_delta.svg');
 }
 
-p > a[href*="//"]:not([href*="wikipedia.org"]):after,
-li > a[href*="//"]:not([href*="wikipedia.org"]):after {
-	background-image: url('/img/out.svg');
-	top: 0.1rem;
-	left: 0.1rem;
-	background-size: 1rem 1rem;
-	width: 1rem;
-	height: 1rem;
-}
-
-p > a[href*="//"][href*="wikipedia.org"]:after,
-li > a[href*="//"][href*="wikipedia.org"]:after {
-	background-image: url('/img/wiki_blue.svg');
-	top: 0.15rem;
-	left: 0.1rem;
-	margin: -0.1rem 0.1rem -0.1rem 0;
-	background-size: 1.2rem 1.2rem;
-	width: 1.2rem;
-	height: 1.2rem;
+p > a[href*="wikipedia.org"]:after,
+li > a[href*="wikipedia.org"]:after {
+	background-image: url('/img/link_wiki.svg');
 }
 
 footer > a {
-	color: #666;
-}
-
-blockquote {
-	margin-left: 0;
-	padding: 0 1rem;
-	color: #819198;
-	border-left: 0.3rem solid #dce6f0;
+	color: #333;
 }
 
 img {
@@ -171,28 +144,29 @@ pre {
 	overflow: auto;
 	background-color: #f3f6fa;
 	border: solid 1px #dce6f0;
-	border-radius: 0.3rem;
-	padding: 0.8rem;
+	border-radius: 0.48rem;
+	padding: 1.28rem;
 }
 
 code {
 	background-color: #f3f6fa;
-	padding: 0.125rem 0.25rem;
-	border-radius: 0.3rem;
+	padding: 0.32rem 0.32rem;
+	border-radius: 0.48rem;
 }
 
 table {
 	border-collapse:collapse;
-	margin: 0.6rem 0 0 0;
+	margin: 1rem 0 0 0;
 }
 
 iframe {
-	margin: 0.6rem 0 0 0;
+	margin: 1rem 0 0 0;
+	display: block;
 }
 
 th, td {
 	border: 1px solid #e9ebec;
-	padding: 0.5rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 dt {
@@ -200,26 +174,26 @@ dt {
 }
 
 hr {
-	margin: 1rem 0;
+	margin: 1.6rem 0;
 	border-color: #e9ebec;
 	border-style: solid;
 }
 
 p {
-	margin: 1rem 0 0 0;
+	margin: 1.6rem 0 0 0;
 }
 
 ol, ul {
-	padding-left: inherit;
+	padding: 0;
 	list-style-position: inside;
-	margin: 0.6rem 0 0 0;
+	margin: 1rem 0 0 0;
 }
 
 d1, d2, d3, d4, d5, d6 {
 	display: block;
-	margin: 0.6rem 0 0 0;
-	padding: 0 0 0 1rem;
-	border-left: 2px solid #ccc;
+	margin: 1rem 0 0 0;
+	padding: 0 0 0 2rem;
+	box-shadow: 2px 0 0 #ccc inset;
 }
 
 d1 > :first-child,
