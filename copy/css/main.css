@@ -6,35 +6,39 @@ html {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	line-height: 1.5;
 	font-size: 1.6rem;
+	line-height: 2.4rem;
 	color: #252525; /* Wikipedia */
 }
 
 header {
 	background: #000;
 	text-align: center;
-	font-weight: bold;
-	font-size: 8rem;
-	padding: 8rem;
+	overflow: auto;
 }
 
 .page-header {
 	color: #fff;
-	margin: 0;
+	display: table;
+	font-weight: bold;
+	font-size: 7rem;
+	margin: 7rem auto;
 }
 
 .page-header:hover {
 	text-decoration: none;
 }
 
-.main-and-footer-container {
-	padding: 0 4rem;
+@media (max-width: 812px) {
+	.page-header {
+		font-size: calc(5 / 58 * 100vw); /* = 70 / 812 * 100vw */
+		margin: calc(5 / 58 * 100vw) auto;
+	}
 }
 
 main {
 	max-width: 108rem;
-	margin: 4rem auto;
+	margin: 4rem auto 6rem auto;
 }
 
 main > :first-child {
@@ -47,8 +51,15 @@ main > :last-child {
 
 footer {
 	max-width: 108rem;
-	margin: 4rem auto;
-	overflow: hidden;
+	min-height: 3.2rem;
+	margin: 6rem auto 4rem auto;
+	overflow: hidden; /* Because of floating elements */
+}
+
+@media (max-width: 1160px) {
+	main, footer {
+		max-width: calc(100vw - 40px - 40 * 100vw / 1160);
+	}
 }
 
 footer > :first-child {
@@ -84,15 +95,16 @@ footer > :last-child {
 	transform: translate(-0.48rem, -0.4rem) rotate(-30deg);
 }
 
+@media (max-width: 500px) {
+	.footer-text {
+		display: none;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: #000;
 	line-height: 1.2;
-	margin: 1.6rem 0 0 0;
-}
-
-h1, h2 {
-	margin: 3.2rem 0 0 0;
 }
 
 h2 {
@@ -114,9 +126,10 @@ li > a:after {
 	content:"";
 	position: relative;
 	background-image: url('/img/link_out.svg');
-	top: 0;
-	left: 0;
 	margin: 0;
+	top: 0.2rem;
+	left: 0.2rem;
+	margin-right: 0.2rem;
 	background-size: 1.6rem 1.6rem;
 	width: 1.6rem;
 	height: 1.6rem;
@@ -125,11 +138,25 @@ li > a:after {
 p > a:not([href*="//"]):after,
 li > a:not([href*="//"]):after {
 	background-image: url('/img/link_delta.svg');
+	margin: 0;
+	top: 0.1rem;
+	left: 0.2rem;
+	margin-right: 0.2rem;
+	background-size: 1.6rem 1.6rem;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 p > a[href*="wikipedia.org"]:after,
 li > a[href*="wikipedia.org"]:after {
 	background-image: url('/img/link_wiki.svg');
+	margin: -0.2rem;
+	top: 0.3rem;
+	left: 0.2rem;
+	margin-right: 0;
+	background-size: 2rem 2rem;
+	width: 2rem;
+	height: 2rem;
 }
 
 footer > a {
@@ -155,13 +182,10 @@ code {
 }
 
 table {
-	border-collapse:collapse;
-	margin: 1rem 0 0 0;
-}
-
-iframe {
-	margin: 1rem 0 0 0;
+	border-collapse: collapse;
+	overflow: auto;
 	display: block;
+	margin: 1.6rem 0;
 }
 
 th, td {
@@ -192,7 +216,7 @@ ol, ul {
 d1, d2, d3, d4, d5, d6 {
 	display: block;
 	margin: 1rem 0 0 0;
-	padding: 0 0 0 2rem;
+	padding: 0 0 0 2.7rem;
 	box-shadow: 2px 0 0 #ccc inset;
 }
 
