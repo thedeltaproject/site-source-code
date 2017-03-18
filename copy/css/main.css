@@ -22,7 +22,7 @@ header {
 	display: table;
 	font-weight: bold;
 	font-size: 7rem;
-	margin: 7rem auto;
+	margin: 10rem auto;
 }
 
 .page-header:hover {
@@ -32,7 +32,7 @@ header {
 @media (max-width: 812px) {
 	.page-header {
 		font-size: calc(5 / 58 * 100vw); /* = 70 / 812 * 100vw */
-		margin: calc(5 / 58 * 100vw) auto;
+		margin: calc(25 / 203 * 100vw) auto; /* = 100 / 812 * 100vw */
 	}
 }
 
