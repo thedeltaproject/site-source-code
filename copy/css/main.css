@@ -2,6 +2,7 @@ html {
 	font-size: 62.5%;
 	overflow-x: hidden;
 	margin-right: calc(-1 * (100vw - 100%));
+	width: 100vw;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 	color: #252525; /* Wikipedia */
+	width: 100vw;
 }
 
 header {
@@ -85,8 +87,7 @@ footer > :last-child {
 .delta-footer {
 	height:3.2rem;
 	position:absolute;
-	left: 50vw;
-	margin: 0 0 0 -1.6rem;
+	left: calc(50vw - 1.6rem);
 	enable-background:new 0 0 1000 1000;
 	transition: all .4s;
 }
@@ -246,81 +247,37 @@ d6 > :last-child {
 	margin-bottom: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-  cursor: pointer;
-  transition: 0.3s;
+gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-#myImg:hover {
-	opacity: 0.7;
+.zoom-img {
+	cursor: zoom-in;
+	margin: 0.5rem;
+	height: 22rem;
+	outline: #222 solid 1rem;
+	position: relative;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-	text-align: center;
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+	align-items: center;
+	justify-content: center;
 }
 
-/* Modal Content (Image) */
-.modal-content {
-  margin: 1rem auto 0 auto;
-  display: block;
-  max-width: 80%;
-	max-height: 83%;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  display: inline-block;
-  color: #ccc;
-  margin: 1rem 0;
-	max-width: 80%;
-	max-height: 13%;
-	overflow: auto;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content {
-  animation-name: zoom-fade-in;
-  animation-duration: 0.2s;
-	animation-timing-function: ease-out;
-}
-
-#caption {
-  animation-name: fade-in;
-  animation-duration: 0.2s;
-	animation-timing-function: ease-out;
-}
-
-@keyframes zoom-fade-in {
-  from {transform: scale(0.9); opacity: 0;}
-  to {transform: scale(1); opacity: 1;}
-}
-
-@keyframes fade-in {
-  from {opacity: 0;}
-  to {opacity: 1;}
+#modal-img {
+	display: block;
+	cursor: zoom-out;
+	max-width: 95%;
+	max-height: 95%;
 }
