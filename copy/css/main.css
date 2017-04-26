@@ -108,6 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 }
 
+h1, h2 {
+	margin-top: 4rem;
+}
+
 h2 {
 	font-weight: normal;
 }
@@ -226,7 +230,7 @@ d1, d2, d3, d4, d5, d6 {
 	display: block;
 	margin: 1rem 0 0 0;
 	padding: 0 0 0 2.7rem;
-	box-shadow: 2px 0 0 #ccc inset;
+	box-shadow: 0.2rem 0 0 #ccc inset;
 }
 
 d1 > :first-child,
@@ -252,6 +256,7 @@ gallery {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin: 2.1rem auto;
 }
 
 .zoom-img {
@@ -280,4 +285,41 @@ gallery {
 	cursor: zoom-out;
 	max-width: 95%;
 	max-height: 95%;
+}
+
+.youtube-embed-container-2 {
+	max-width: 56rem;
+	margin: 1.6rem auto;
+}
+
+.youtube-embed-container-1 {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	border: #222 solid 1rem;
+}
+
+.youtube-embed {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.disclaimer {
+	display: block;
+	padding: 1rem 2.7rem;
+	box-shadow: 0.7rem 0 0 #e91b00 inset;
+	background-color: #ffe6de;
+}
+
+.disclaimer > :first-child {
+	margin-top: 0;
+}
+
+.disclaimer > :last-child {
+	margin-bottom: 0;
+}
+
+.disclaimer-heading {
+	font-weight: bold;
 }
