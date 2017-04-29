@@ -309,6 +309,9 @@ gallery > img,
 .disclaimer {
 	display: block;
 	padding: 1rem 2.7rem;
+}
+
+.disclaimer-red {
 	box-shadow: 0.7rem 0 0 #e91b00 inset;
 	background-color: #ffe6de;
 }
