@@ -191,11 +191,20 @@ table {
 	overflow: auto;
 	display: block;
 	margin: 1.6rem 0;
+	text-align: center;
 }
 
 th, td {
 	border: 1px solid #e9ebec;
 	padding: 0.8rem 1.6rem;
+}
+
+.t-red {
+	background-color: #ffe6de;
+}
+
+.t-green {
+	background-color: #deffe6;
 }
 
 dt {
