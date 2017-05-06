@@ -93,7 +93,7 @@ footer > :last-child {
 }
 
 .delta-footer:hover {
-	transform: translate(-0.48rem, -0.4rem) rotate(-30deg);
+	transform: rotate(-30deg);
 }
 
 @media (max-width: 500px) {
@@ -162,6 +162,18 @@ li > a[href*="wikipedia.org"]:after {
 	background-size: 2rem 2rem;
 	width: 2rem;
 	height: 2rem;
+}
+
+p > a[href*="doi.org"]:after,
+li > a[href*="doi.org"]:after {
+	background-image: url('/img/link_sci.svg');
+	margin: 0;
+	top: 0.2rem;
+	left: 0.2rem;
+	margin-right: 0.2rem;
+	background-size: 1.6rem 1.6rem;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 footer > a {
