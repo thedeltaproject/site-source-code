@@ -233,6 +233,14 @@ p {
 	margin: 1.6rem 0;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
 ol, ul {
 	padding: 0;
 	margin: 1.6rem 0;
