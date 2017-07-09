@@ -19,23 +19,9 @@ header {
 	overflow: auto;
 }
 
-.page-header {
-	color: #fff;
-	display: table;
-	font-weight: bold;
-	font-size: 7rem;
-	margin: 10rem auto;
-}
-
-.page-header:hover {
-	text-decoration: none;
-}
-
-@media (max-width: 812px) {
-	.page-header {
-		font-size: calc(5 / 58 * 100vw); /* = 70 / 812 * 100vw */
-		margin: calc(25 / 203 * 100vw) auto; /* = 100 / 812 * 100vw */
-	}
+.delta-header {
+	height:12.8rem;
+	padding: 4rem;
 }
 
 main {
@@ -260,6 +246,7 @@ d1, d2, d3, d4, d5, d6 {
 	margin: 1rem 0 0 0;
 	padding: 0 0 0 2.7rem;
 	box-shadow: 0.2rem 0 0 #ccc inset;
+	overflow: auto;
 }
 
 d1 > :first-child,
@@ -338,11 +325,12 @@ gallery > img,
 .disclaimer {
 	display: block;
 	padding: 1rem 2.7rem;
+	background-color: #edf0f5;
+	box-shadow: 0.8rem 0 0 #000 inset;
 }
 
-.disclaimer-red {
-	box-shadow: 0.7rem 0 0 #e91b00 inset;
-	background-color: #ffe6de;
+.disclaimer > p {
+	margin: 0.8rem 0;
 }
 
 .disclaimer > :first-child {
@@ -355,6 +343,22 @@ gallery > img,
 
 .disclaimer-heading {
 	font-weight: bold;
+}
+
+kek {
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 3.2rem;
+	margin: 4rem 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+.img-right {
+	float: right;
+	height: 10rem;
+	margin: 0 0 0 1.6rem;
 }
 
 #modal-prev,
