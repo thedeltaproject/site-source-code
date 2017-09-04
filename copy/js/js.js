@@ -95,5 +95,14 @@ document.onkeydown = function(e) {
   }
 };
 // ###################################################
+// Proof class #######################################
 // ###################################################
-// ###################################################
+
+var linkList = document.getElementsByTagName('a');
+if(linkList) {
+  for (var i = 0; i < linkList.length; i++) {
+    if (linkList[i].innerHTML == '') {
+      linkList[i].className += linkList[i].className ? ' proof' : 'proof';
+    }
+  }
+}

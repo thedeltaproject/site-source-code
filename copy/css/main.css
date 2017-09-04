@@ -1,5 +1,5 @@
 html {
-	font-size: 62.5%;
+	font-size: 1vw;
 	overflow-x: hidden;
 	margin-right: calc(-1 * (100vw - 100%));
 	width: 100vw;
@@ -7,164 +7,183 @@ html {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.6rem;
-	line-height: 2.4rem;
-	color: #252525; /* Wikipedia */
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #fff;
 	width: 100vw;
+	background-color: #000;
 }
 
-header {
+.header {
 	background: #000;
 	text-align: center;
 	overflow: auto;
 }
 
-.delta-header {
-	height:12.8rem;
-	padding: 4rem;
+.index-layout .header {
+	text-align: left;
+	height: 56.25vw;
+	width: 100vw;
 }
 
-main {
-	max-width: 108rem;
-	margin: 4rem auto 6rem auto;
+.default-layout .header img {
+	height: 10rem;
+	padding: 3rem;
 }
 
-main > :first-child {
+.index-layout .header img {
+	height:40vw;
+	position: absolute;
+	left: 47vw;
+	top: calc(0.5625 * 100vw * 0.09);
+	transform: rotate(5deg);
+}
+
+.index-layout h1 {
+	text-shadow: -0.1rem 0.1rem 0 #000, -0.2rem 0.2rem 0 #fff;
+	text-decoration: none;
+	color: #fff;
+	max-width: 50vw;
+	font-weight: bold;
+	font-size: 7vw;
+	line-height: 7vw;
+	margin: 0;
+	position: absolute;
+	left: 9vw;
+	top: calc(0.5625 * 100vw * 0.15);
+}
+
+.index-layout .header p {
+	position: absolute;
+	left: 9vw;
+	top: calc(0.5625 * 100vw * 0.50);
+	color: #fff;
+	font-weight: bold;
+	font-size: 2vw;
+	margin: 0;
+	max-width: 35vw;
+	line-height: 2.2vw;
+}
+
+.main > :first-child {
 	margin-top: 0;
 }
 
-main > :last-child {
+.main > :last-child {
 	margin-bottom: 0;
 }
 
-footer {
-	max-width: 108rem;
-	min-height: 3.2rem;
+.footer {
+	max-width: 80rem;
 	margin: 6rem auto 4rem auto;
 	overflow: hidden; /* Because of floating elements */
 }
 
-@media (max-width: 1160px) {
-	main, footer {
-		max-width: calc(100vw - 40px - 40 * 100vw / 1160);
-	}
-}
-
-footer > :first-child {
+.footer > :first-child {
 	margin-left: 0;
 }
 
-footer > :last-child {
+.footer > :last-child {
+	float: right;
+	line-height: 2rem;
 	margin-right: 0;
 }
 
-.float-left {
-	float: left;
+.footer i {
+	margin: 0 0.5rem;
 }
 
-.float-right {
-	float: right;
-}
-
-.footer-text {
-	margin: 0.4rem 1.6rem;
-}
-
-.delta-footer {
-	height:3.2rem;
+.footer img {
+	height:2rem;
 	position:absolute;
 	left: calc(50vw - 1.6rem);
-	enable-background:new 0 0 1000 1000;
 	transition: all .4s;
 }
 
-.delta-footer:hover {
+.footer img:hover {
 	transform: rotate(-30deg);
 }
 
-@media (max-width: 500px) {
-	.footer-text {
-		display: none;
-	}
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
+.white-back {
 	color: #000;
-	line-height: 1.2;
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 4px;
+	margin: 4rem auto;
+	max-width: 80rem;
+	box-shadow: 0 0 1px #fff;
 }
 
-h1, h2 {
-	margin-top: 4rem;
+.white-back > * {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+.white-back > :first-child {
+	margin-top: 1.8rem;
+}
+
+.white-back > :last-child {
+	margin-bottom: 2.9rem;
+}
+
+h1 {
+	font-size: 3rem;
+	text-shadow: -0.05rem 0.05rem 0 #fff, -0.1rem 0.1rem 0 #000;
+	margin-bottom: 1rem;
 }
 
 h2 {
+	font-size: 3rem;
+	text-shadow: -0.05rem 0.05rem 0 #fff, -0.1rem 0.1rem 0 #000;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.6rem;
 	font-weight: normal;
+	padding-bottom: 0.4rem;
+	border-bottom: 1px solid #000;
 }
 
 a {
-	color: #2d89ef;
+	color: #fff;
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
+.white-back p a {
+	color: #000;
+	text-decoration:none;
+	background-image: linear-gradient(to bottom, #51caff, #51caff);
+	background-repeat: no-repeat;
+  background-size: 100% 10%;
+  background-position: 100% 100%;
+  transition: background-size 0.05s ease-in;
 }
 
-p > a:after,
-li > a:after {
-	display: inline-block;
-	content:"";
-	position: relative;
-	background-image: url('/img/link_out.svg');
-	margin: 0;
-	top: 0.2rem;
-	left: 0.2rem;
-	margin-right: 0.2rem;
-	background-size: 1.6rem 1.6rem;
-	width: 1.6rem;
-	height: 1.6rem;
+.white-back p a:hover{
+	background-size: 100% 35%;
 }
 
-p > a:not([href*="//"]):after,
-li > a:not([href*="//"]):after {
-	background-image: url('/img/link_delta.svg');
-	margin: 0;
-	top: 0.1rem;
-	left: 0.2rem;
-	margin-right: 0.2rem;
-	background-size: 1.6rem 1.6rem;
-	width: 1.6rem;
-	height: 1.6rem;
+.white-back p .proof {
+	background-image: none;
 }
 
-p > a[href*="wikipedia.org"]:after,
-li > a[href*="wikipedia.org"]:after {
-	background-image: url('/img/link_wiki.svg');
-	margin: -0.2rem;
-	top: 0.3rem;
-	left: 0.2rem;
-	margin-right: 0;
-	background-size: 2rem 2rem;
-	width: 2rem;
-	height: 2rem;
+.white-back p .proof:after {
+	color: #48b4e3;
+	content: "\f08e";
+	font-family: FontAwesome;
 }
 
-p > a[href*="doi.org"]:after,
-li > a[href*="doi.org"]:after {
-	background-image: url('/img/link_sci.svg');
-	margin: 0;
-	top: 0.2rem;
-	left: 0.2rem;
-	margin-right: 0.2rem;
-	background-size: 1.6rem 1.6rem;
-	width: 1.6rem;
-	height: 1.6rem;
-}
 
-footer > a {
-	color: #333;
-}
+/*fa-external-link*/
+
+/*.white-back a:after{
+	content: "❯";
+}*/
+
+/*.white-back a:not([href*="//"]) {
+}*/
 
 img {
 	max-width: 100%;
@@ -216,7 +235,7 @@ hr {
 }
 
 p {
-	margin: 1.6rem 0;
+	margin: 1.5rem 0;
 }
 
 .text-center {
@@ -241,46 +260,21 @@ ul > li::before {
 	content: "• "
 }
 
-d1, d2, d3, d4, d5, d6 {
-	display: block;
-	margin: 1rem 0 0 0;
-	padding: 0 0 0 2.7rem;
-	box-shadow: 0.2rem 0 0 #ccc inset;
-	overflow: auto;
-}
-
-d1 > :first-child,
-d2 > :first-child,
-d3 > :first-child,
-d4 > :first-child,
-d5 > :first-child,
-d6 > :first-child {
-	margin-top: 0;
-}
-
-d1 > :last-child,
-d2 > :last-child,
-d3 > :last-child,
-d4 > :last-child,
-d5 > :last-child,
-d6 > :last-child {
-	margin-bottom: 0;
-}
-
 gallery {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 2.1rem auto;
+	margin: 1.6rem 0;
+	padding: 0.4rem 0;
 }
 
 gallery > img,
 .zoom-img {
 	cursor: zoom-in;
-	margin: 0.5rem;
-	height: 22rem;
-	outline: #222 solid 1rem;
+	margin: -0.4rem;
+	height: 15rem;
+	border: #000 solid 0.8rem;
 	position: relative;
 }
 
@@ -313,7 +307,7 @@ gallery > img,
 	position: relative;
 	height: 0;
 	padding-bottom: 56.25%;
-	border: #222 solid 1rem;
+	border: #000 solid 0.8rem;
 }
 
 .youtube-embed {
@@ -341,18 +335,27 @@ gallery > img,
 	margin-bottom: 0;
 }
 
-.disclaimer-heading {
+.disclaimer-title {
 	font-weight: bold;
 }
 
-kek {
-	display: block;
+.kek {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
 	background-color: black;
-	color: white;
-	padding: 3.2rem;
-	margin: 4rem 0;
+	color: #fff;
+	padding: 5rem 0;
+	margin: 1.5rem 0;
 	font-weight: bold;
 	text-align: center;
+}
+
+.kek > p {
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 2rem;
 }
 
 .img-right {
@@ -364,13 +367,13 @@ kek {
 #modal-prev,
 #modal-next {
 	cursor: pointer;
-  position: absolute;
+	position: absolute;
 	padding: 0 2rem;
 	top: calc(50% - 4.5rem);
 	font-size: 6rem;
 	line-height: 9rem;
-  color: rgba(255,255,255,0.8);
-  font-weight: bold;
+	color: rgba(255,255,255,0.8);
+	font-weight: bold;
 }
 
 #modal-prev:hover,
@@ -379,9 +382,67 @@ kek {
 }
 
 #modal-prev {
-  left: 0;
+	left: 0;
 }
 
 #modal-next {
-  right: 0;
+	right: 0;
+}
+
+.post-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.post-container > :first-child {
+	margin-top: 0;
+}
+
+.post-container > :last-child {
+	margin-bottom: 0;
+}
+
+.post {
+	width: 65rem;
+	height: 30rem;
+	background-color: black;
+	background-image: url('/img/index/1.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: 30rem;
+	margin: 2rem 0;
+	border: 0.2rem solid #fff;
+	border-radius: 2px;
+	box-shadow: -0.2rem 0.2rem 0 #000, -0.4rem 0.4rem 0 #fff;
+	color: #fff;
+}
+
+.post > p {
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 2rem 3rem;
+	max-width: 32rem;
+}
+
+.post > h2 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 2rem 3rem;
+	text-shadow: -0.05rem 0.05rem 0 #f00, -0.1rem 0.1rem 0 #0f0, -0.15rem 0.15rem 0 #00f;
+	/*text-shadow: -0.05rem 0.05rem 0 #000, -0.1rem 0.1rem 0 #fff;*/
+}
+
+.post form {
+	margin: 3rem;
+}
+
+.post button {
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 2px;
+	background-color: #fff;
+	border: none;
+	height: 2.5rem;
+	width: 7rem;
 }

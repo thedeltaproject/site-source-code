@@ -27,27 +27,32 @@
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script async src="/js/js.js"></script>
 </head>
-<body>
-  <header>
-    <a href="/">
-      <img src="/img/icon-delta-tricolor.svg" class="delta-header">
-    </a>
-  </header>
+<body class="index-layout">
+  <div class="header">
+    <img src="/img/icon-delta-tricolor.svg">
 
-  <main>
-    {{content}}
-  </main>
+    <h1>
+      The Delta Project
+    </h1>
 
-  <footer>
-    <p class="float-left footer-text">
-      2017 The Delta Project
+    <p>
+      Дельта — это проект, созданный для популяризации науки и рационального мышления, а также морали, основанной на принципах рационализма и просто здравого смысла.
     </p>
+  </div>
+
+  <div class="main">
+    {{content}}
+  </div>
+
+  <div class="footer">
+    <a href="https://t.me/deltaim"><i class="fa fa-telegram fa-inverse fa-2x"></i></a>
+    <a href="https://vk.com/deltaim"><i class="fa fa-vk fa-inverse fa-2x"></i></a>
 
     <a href="/">
-      <img src="/img/icon_delta.svg" class="delta-footer">
+      <img src="/img/icon_delta.svg">
     </a>
 
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.ru" class="float-right footer-text">Под лицензией CC BY 4.0</a>
-  </footer>
+  </div>
 </body>
 </html>
